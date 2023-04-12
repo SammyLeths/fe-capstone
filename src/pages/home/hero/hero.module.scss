@@ -1,0 +1,50 @@
+@use '../../../app.module.scss' as hero;
+
+section {
+  padding: 6rem 0rem;
+  background-color: hero.$primary-feldgrau;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+
+    .hero_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+
+      h1 {
+        color: hero.$primary-gold;
+        line-height: 0.7;
+        font-weight: hero.$font-medium;
+      }
+
+      h2 {
+        color: white;
+        font-weight: hero.$font-medium;
+        line-height: 1;
+      }
+
+      p {
+        width: 500px;
+        color: white;
+      }
+    }
+
+    .hero_img_wrapper {
+      justify-self: end;
+    }
+
+    .hero_img {
+      width: 375px;
+      height: 397px;
+      background-image: url('../../../assets/img/restauran-food.jpg');
+      background-position: center;
+      background-size: cover;
+      border-radius: hero.$border-radius;
+    }
+  }
+}

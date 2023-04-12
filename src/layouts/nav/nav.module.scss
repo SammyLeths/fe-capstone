@@ -1,0 +1,94 @@
+@use '../../app.module.scss' as nav;
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+
+  /* For large devices ≤ 768px */
+  @media screen and (max-width: nav.$md) {
+    width: 100%;
+    justify-content: end;
+  }
+
+  .desktop_nav {
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: nav.$md) {
+      display: none;
+    }
+  }
+
+  .mobile_nav {
+    display: flex;
+
+    /* For large devices ≥ 769px */
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+
+    .hamburger {
+      cursor: pointer;
+    }
+  }
+
+  .open_menu,
+  .close_menu {
+    display: none;
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: nav.$md) {
+      display: initial;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: nav.$md) {
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      top: 58px;
+      right: 0;
+      background-color: white;
+      padding: 1rem;
+    }
+
+    li {
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: nav.$md) {
+        text-align: center;
+        padding: 0.2rem 0 0.5rem 0;
+        width: 95%;
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: nav.$md) {
+          border-bottom: 1px solid nav.$secondary-anti-flash-white;
+        }
+      }
+
+      &:hover a {
+        color: nav.$primary-gold;
+      }
+
+      a {
+        /* For large devices ≤ 992px */
+        @media screen and (max-width: nav.$lg) {
+          font-size: nav.$normal-font-size-lg;
+        }
+
+        &:active {
+          color: nav.$primary-gold;
+        }
+      }
+    }
+  }
+}

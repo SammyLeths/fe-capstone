@@ -1,10 +1,17 @@
-import './App.css';
+import Header from './layouts/header/Header';
+import Footer from './layouts/footer/Footer';
+import Home from './pages/home/Home';
+import './app.module.scss';
 
 function App() {
   return (
-    <div className='App'>
-      <p>Homepage</p>
-    </div>
+    <>
+      <main>
+        <Header />
+        <Home />
+        <Footer />
+      </main>
+    </>
   );
 }
 

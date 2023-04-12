@@ -1,0 +1,19 @@
+@use '../../app.module.scss' as btn;
+
+.btn {
+  background-color: btn.$primary-gold;
+  color: btn.$secondary-jet;
+  padding: 1rem 2rem;
+  border-radius: btn.$border-radius;
+  border: none;
+  font-size: 16pt;
+  cursor: pointer;
+  transition: btn.$transition;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  &:hover {
+    background-color: btn.$secondary-jet;
+    color: btn.$primary-gold;
+  }
+}
