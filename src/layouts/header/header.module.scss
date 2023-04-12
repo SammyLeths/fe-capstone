@@ -1,6 +1,13 @@
 @use '../../app.module.scss' as header;
 
 header {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
+
   .container {
     display: flex;
     flex-direction: row;

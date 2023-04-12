@@ -1,0 +1,121 @@
+@use '../../../app.module.scss' as highlight;
+
+.section {
+  padding: 10rem 0;
+  background-color: white;
+
+  /* For large devices ≤ 768px */
+  @media screen and (min-width: highlight.$xl) {
+    padding: 11rem 0;
+  }
+
+  .container {
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 3rem;
+
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: highlight.$sm) {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2rem;
+        padding-top: 2rem;
+      }
+
+      h1 {
+        line-height: 0.7;
+        font-weight: highlight.$font-medium;
+
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: highlight.$md) {
+          font-size: highlight.$h1-font-size-lg;
+        }
+      }
+    }
+
+    .specials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      justify-content: center;
+
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: highlight.$md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* For large devices ≤ 576px */
+      @media screen and (max-width: highlight.$sm) {
+        grid-template-columns: 1fr;
+      }
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+      }
+
+      &__image {
+        width: 100%;
+
+        img {
+          width: 100%;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+      }
+
+      &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 1.5rem;
+        background-color: highlight.$primary-accent;
+        padding: 2rem;
+        margin-top: -5px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .content_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 1rem;
+      }
+
+      &__heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          font-weight: highlight.$font-medium;
+          color: highlight.$secondary-atomic-tangerine;
+        }
+      }
+
+      &__description {
+      }
+
+      &__cta {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        font-weight: highlight.$font-semi-bold;
+
+        .delivery_icon {
+          font-size: highlight.$h3-font-size;
+        }
+
+        &:hover {
+          color: highlight.$primary-gold;
+        }
+      }
+    }
+  }
+}

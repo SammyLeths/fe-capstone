@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './hero.module.scss';
 import Button from '../../../components/button/Button';
+//import HeroImg from '../../../assets/img/restauran_food.jpg';
 
 const Hero = () => {
   return (
-    <section>
+    <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.hero_content}>
           <div>

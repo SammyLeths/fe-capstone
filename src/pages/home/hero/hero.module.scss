@@ -1,50 +1,90 @@
 @use '../../../app.module.scss' as hero;
 
-section {
-  padding: 6rem 0rem;
+.section {
+  padding: 4rem 0;
   background-color: hero.$primary-feldgrau;
+
+  /* For large devices ≤ 640px */
+  @media screen and (max-width: 640px) {
+    padding-bottom: 10rem;
+  }
 
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     column-gap: 4rem;
+
+    /* For large devices ≤ 640px */
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+      row-gap: 2.5rem;
+    }
 
     .hero_content {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 30px;
+      gap: 1.5rem;
+
+      /* For large devices ≤ 640px */
+      @media screen and (max-width: 640px) {
+        width: 90%;
+      }
 
       h1 {
         color: hero.$primary-gold;
         line-height: 0.7;
         font-weight: hero.$font-medium;
+
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: hero.$md) {
+          font-size: hero.$h1-font-size-lg;
+        }
       }
 
       h2 {
         color: white;
         font-weight: hero.$font-medium;
         line-height: 1;
+
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: hero.$md) {
+          font-size: hero.$h2-font-size-lg;
+        }
       }
 
       p {
-        width: 500px;
         color: white;
       }
     }
 
     .hero_img_wrapper {
-      justify-self: end;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .hero_img {
+      position: absolute;
+      top: 0;
       width: 375px;
-      height: 397px;
-      background-image: url('../../../assets/img/restauran-food.jpg');
+      height: 470px;
+      background-image: url('../../../assets/img/restauran_food.jpg');
       background-position: center;
       background-size: cover;
       border-radius: hero.$border-radius;
+
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: hero.$md) {
+        width: 300px;
+        height: 430px;
+      }
+
+      /* For large devices ≤ 640pxpx */
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        height: 300px;
+      }
     }
   }
 }
