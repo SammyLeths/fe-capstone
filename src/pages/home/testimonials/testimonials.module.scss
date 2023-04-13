@@ -1,0 +1,95 @@
+@use '../../../app.module.scss' as testimonial;
+
+.section {
+  padding: 5rem 0;
+  background-color: testimonial.$secondary-accent;
+
+  .container {
+    .heading {
+      text-align: center;
+      padding-bottom: 3rem;
+
+      h1 {
+        font-weight: testimonial.$font-medium;
+
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: testimonial.$md) {
+          font-size: testimonial.$h1-font-size-lg;
+        }
+      }
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      justify-content: center;
+
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: testimonial.$md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* For large devices ≤ 576px */
+      @media screen and (max-width: testimonial.$sm) {
+        grid-template-columns: 1fr;
+      }
+
+      &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 1rem;
+        padding: 1.5rem;
+        background-color: testimonial.$secondary-anti-flash-white;
+        border-radius: testimonial.$border-radius;
+      }
+
+      .review_wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+
+      &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__stars {
+        color: testimonial.$secondary-atomic-tangerine;
+        display: flex;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 1.5rem;
+
+        img {
+          height: 80px;
+          border-radius: testimonial.$border-radius;
+        }
+
+        p {
+          font-size: testimonial.$small-font-size;
+        }
+      }
+
+      .content_wrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+
+      &__location {
+        p {
+          font-weight: testimonial.$font-medium;
+        }
+      }
+    }
+  }
+}

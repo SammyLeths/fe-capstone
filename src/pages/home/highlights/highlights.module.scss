@@ -1,13 +1,8 @@
 @use '../../../app.module.scss' as highlight;
 
 .section {
-  padding: 10rem 0;
+  padding: 10rem 0 5rem 0;
   background-color: white;
-
-  /* For large devices ≤ 768px */
-  @media screen and (min-width: highlight.$xl) {
-    padding: 11rem 0;
-  }
 
   .container {
     .heading {
