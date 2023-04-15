@@ -1,7 +1,7 @@
 @use '../../../app.module.scss' as testimonial;
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0 5rem 0;
   background-color: testimonial.$secondary-accent;
 
   .container {
