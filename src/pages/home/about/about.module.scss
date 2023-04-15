@@ -1,0 +1,134 @@
+@use '../../../app.module.scss' as about;
+
+.section {
+  padding: 6rem 0 15rem 0;
+  background-color: white;
+
+  /* For large devices ≤ 768px */
+  @media screen and (max-width: about.$md) {
+    padding: 6rem 0 6rem 0;
+  }
+
+  /* For large devices ≤ 768px */
+  @media screen and (max-width: about.$md) {
+    padding: 6rem 0 12rem 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: about.$md) {
+      width: 70%;
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: about.$sm) {
+      width: 100%;
+    }
+  }
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        color: about.$primary-feldgrau;
+        line-height: 0.7;
+        font-weight: about.$font-medium;
+
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: about.$md) {
+          font-size: about.$h1-font-size-lg;
+        }
+      }
+
+      h2 {
+        color: about.$primary-gold;
+        font-weight: about.$font-medium;
+        line-height: 1;
+
+        /* For large devices ≤ 768px */
+        @media screen and (max-width: about.$md) {
+          font-size: about.$h2-font-size-lg;
+        }
+      }
+    }
+
+    .text {
+      p {
+        margin-bottom: 1rem;
+        width: 85%;
+      }
+    }
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: about.$md) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* For large devices ≤ 576px */
+    @media screen and (max-width: about.$sm) {
+      gap: 0;
+      justify-content: flex-start;
+    }
+
+    .chef_a {
+      position: absolute;
+      width: 252px;
+      right: 150px;
+      bottom: -150px;
+      border-radius: about.$border-radius;
+
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: about.$md) {
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+      }
+
+      /* For large devices ≤ 576px */
+      @media screen and (max-width: about.$sm) {
+        width: 200px;
+        bottom: -100px;
+      }
+    }
+
+    .chef_b {
+      position: absolute;
+      width: 252px;
+      right: 0px;
+      border-radius: about.$border-radius;
+
+      /* For large devices ≤ 768px */
+      @media screen and (max-width: about.$md) {
+        position: relative;
+      }
+
+      /* For large devices ≤ 576px */
+      @media screen and (max-width: about.$sm) {
+        width: 200px;
+        margin-left: -100px;
+      }
+    }
+  }
+}

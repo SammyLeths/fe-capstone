@@ -33,6 +33,7 @@
       /* For large devices ≤ 576px */
       @media screen and (max-width: testimonial.$sm) {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
       }
 
       &__card {

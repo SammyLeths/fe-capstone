@@ -1,0 +1,50 @@
+@use '../../app.module.scss' as footer;
+
+.section {
+  padding: 5rem 0;
+  background-color: footer.$primary-accent;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: footer.$md) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+
+    .navigation {
+    }
+
+    .contact {
+    }
+
+    .socials {
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    ul li:not(:last-child) {
+      padding-bottom: 1rem;
+      text-decoration: underline;
+    }
+
+    ul li {
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: footer.$primary-gold;
+      }
+    }
+  }
+}
