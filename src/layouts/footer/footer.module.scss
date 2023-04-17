@@ -33,17 +33,21 @@
       margin-bottom: 1rem;
     }
 
-    ul li:not(:last-child) {
-      padding-bottom: 1rem;
-      text-decoration: underline;
-    }
+    ul {
+      li {
+        cursor: pointer;
 
-    ul li {
-      text-decoration: underline;
-      cursor: pointer;
+        &:not(:last-child) {
+          padding-bottom: 1rem;
+        }
 
-      &:hover {
-        color: footer.$primary-gold;
+        a {
+          text-decoration: underline;
+
+          &:hover {
+            color: footer.$primary-gold;
+          }
+        }
       }
     }
   }

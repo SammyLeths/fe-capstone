@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 const NavLinks = (props) => {
   const animateFrom = { opacity: 0, y: -30 };
@@ -18,7 +19,7 @@ const NavLinks = (props) => {
         transition={{ ...transition, delay: 0.05 }}
         onClick={props.closeMenu}
       >
-        <a href='#home'>Home</a>
+        <NavLink to='/'>Home</NavLink>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -26,7 +27,7 @@ const NavLinks = (props) => {
         transition={{ ...transition, delay: 0.1 }}
         onClick={props.closeMenu}
       >
-        <a href='#about'>About</a>
+        <NavLink to='/about'>About</NavLink>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -34,7 +35,7 @@ const NavLinks = (props) => {
         transition={{ ...transition, delay: 0.15 }}
         onClick={props.closeMenu}
       >
-        <a href='#menu'>Menu</a>
+        <NavLink to='/menu'>Menu</NavLink>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -42,7 +43,7 @@ const NavLinks = (props) => {
         transition={{ ...transition, delay: 0.2 }}
         onClick={props.closeMenu}
       >
-        <a href='#reservations'>Reservations</a>
+        <NavLink to='/reservations'>Reservations</NavLink>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -50,7 +51,7 @@ const NavLinks = (props) => {
         transition={{ ...transition, delay: 0.25 }}
         onClick={props.closeMenu}
       >
-        <a href='#order-online'>Order Online</a>
+        <NavLink to='/order-online'>Order Online</NavLink>
       </motion.li>
       <motion.li
         initial={animateFrom}
@@ -58,7 +59,7 @@ const NavLinks = (props) => {
         transition={{ ...transition, delay: 0.3 }}
         onClick={props.closeMenu}
       >
-        <a href='#login'>Login</a>
+        <NavLink to='/login'>Login</NavLink>
       </motion.li>
     </motion.ul>
   );
