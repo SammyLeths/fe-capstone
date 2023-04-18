@@ -8,6 +8,11 @@ header {
   background-color: white;
   z-index: 3;
 
+  /* For large devices ≥ 992px */
+  @media screen and (min-width: header.$lg) {
+    border-bottom: 1px solid header.$primary-feldgrau;
+  }
+
   .container {
     display: flex;
     flex-direction: row;

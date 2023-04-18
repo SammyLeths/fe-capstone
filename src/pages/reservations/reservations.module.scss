@@ -1,8 +1,118 @@
 @use '../../app.module.scss' as reserve;
 
-.section {
+.page_header {
+  position: relative;
+  padding: 3rem;
+  background-image: url('../../../src/assets/img/reserve-table.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .overlay {
+    @include reserve.overlay;
+  }
+
   .container {
-    .page_header {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    color: reserve.$primary-gold;
+  }
+}
+
+.reserve {
+  padding: 5rem 0 20rem 0;
+
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+    background-color: reserve.$primary-feldgrau;
+    // background-image: linear-gradient(
+    //     to bottom right,
+    //     rgba(reserve.$primary-feldgrau, 0.3),
+    //     rgba(reserve.$primary-gold, 0.3)
+    //   ),
+    //   url('../../../src/assets/img/reservations.jpg');
+    // background-size: cover;
+    // background-position: center;
+    border-radius: 1rem;
+    // filter: contrast(150%);
+
+    .overlay {
+      @include reserve.overlay;
+      background-color: rgba(black, 0.3);
+      border-radius: 1rem;
+    }
+  }
+
+  &__cta {
+    padding-right: 5rem;
+    //z-index: 1;
+
+    h2 {
+      line-height: 0.9;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: white;
+      padding-right: 6rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__form {
+    width: 40%;
+    background-color: white;
+    padding: 2.5rem;
+    border: 3px solid reserve.$primary-gold;
+    border-radius: 1rem;
+    z-index: 1;
+    position: absolute;
+    right: 3.8rem;
+    top: 3.8rem;
+    height: auto;
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .form_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form_control {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &:last-child {
+        margin-top: 1rem;
+      }
+
+      p {
+        margin-bottom: 0;
+        color: red;
+      }
+    }
+
+    .form_input {
+      border-radius: reserve.$border-radius;
+      padding: 10px;
+      border: 1px solid reserve.$secondary-jet;
+    }
+
+    input[type='submit'] {
+      @include reserve.btn;
     }
   }
 }
