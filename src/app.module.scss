@@ -88,6 +88,12 @@ $smaller-font-size-lg: 0.75rem;
   width: -moz-fit-content;
   width: fit-content;
 
+  /* For large devices ≤ 576px */
+  @media screen and (max-width: $sm) {
+    padding: 0.5rem 1rem;
+    font-size: $normal-font-size;
+  }
+
   &:hover {
     background-color: $secondary-jet;
     color: $primary-gold;
@@ -132,6 +138,11 @@ h1 {
 
 h2 {
   font-size: $h2-font-size;
+
+  /* For large devices ≤ 576px */
+  @media screen and (max-width: $sm) {
+    font-size: $h2-font-size-lg;
+  }
 }
 
 h3 {

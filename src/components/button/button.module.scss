@@ -13,6 +13,12 @@
   width: -moz-fit-content;
   width: fit-content;
 
+  /* For large devices ≤ 576px */
+  @media screen and (max-width: btn.$sm) {
+    padding: 0.5rem 1rem;
+    font-size: btn.$normal-font-size;
+  }
+
   &:hover {
     background-color: btn.$secondary-jet;
     color: btn.$primary-gold;

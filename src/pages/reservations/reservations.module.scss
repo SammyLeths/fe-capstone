@@ -26,7 +26,7 @@
 
   /* For large devices ≤ 768px */
   @media screen and (max-width: reserve.$md) {
-    padding: 5rem 0 36rem 0;
+    padding: 3rem 0 36rem 0;
   }
 
   .container {
@@ -56,7 +56,7 @@
 
     /* For large devices ≤ 576px */
     @media screen and (max-width: reserve.$sm) {
-      padding: 2rem 2rem 8rem 2rem;
+      padding: 1.5rem 1.5rem 8rem 1.5rem;
     }
 
     .overlay {
@@ -122,8 +122,8 @@
 
     /* For large devices ≤ 576px */
     @media screen and (max-width: reserve.$sm) {
-      width: 82%;
-      top: 135%;
+      width: 85%;
+      top: 145%;
       padding: 1.5rem;
     }
 
