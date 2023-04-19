@@ -109,7 +109,6 @@ const Reservations = ({ initialTimes, dispatch }) => {
                   min='1'
                   max='10'
                   className={styles.form_input}
-                  //onChange={(e) => setGuests(e.target.value)}
                   value={formik.values.guests}
                   {...formik.getFieldProps('guests')}
                 />
@@ -124,7 +123,6 @@ const Reservations = ({ initialTimes, dispatch }) => {
                   name='occasion'
                   id='occasion'
                   className={styles.form_input}
-                  //onChange={(e) => setOccasion(e.target.value)}
                   value={formik.values.occasion}
                   {...formik.getFieldProps('occasion')}
                 >

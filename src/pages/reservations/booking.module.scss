@@ -1,7 +1,12 @@
 @use '../../app.module.scss' as booking;
 
 .booking {
-  padding: 5rem 0 35rem 0;
+  padding: 5rem 0 37rem 0;
+
+  /* For large devices ≤ 768px */
+  @media screen and (max-width: booking.$sm) {
+    padding: 3rem 0 33rem 0;
+  }
 
   .container {
     position: relative;
@@ -47,6 +52,18 @@
     border: 3px solid booking.$primary-gold;
     border-radius: 1rem;
     z-index: 1;
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: booking.$md) {
+      top: 14rem;
+      width: 75%;
+    }
+
+    /* For large devices ≤ 576px */
+    @media screen and (max-width: booking.$sm) {
+      width: 85%;
+      padding: 1.5rem;
+    }
 
     h3 {
       text-align: center;

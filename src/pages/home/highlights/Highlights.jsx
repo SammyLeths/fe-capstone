@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './highlights.module.scss';
 import Button from '../../../components/button/Button';
 import Specials from './Specials';
+import { NavLink } from 'react-router-dom';
 
 const Highlights = () => {
   return (
@@ -9,7 +10,9 @@ const Highlights = () => {
       <div className={styles.container}>
         <div className={styles.heading}>
           <h1>This weeks specials!</h1>
-          <Button>Online Menu</Button>
+          <NavLink to='/menu'>
+            <Button>Online Menu</Button>
+          </NavLink>
         </div>
         <div className={styles.specials}>
           <Specials />

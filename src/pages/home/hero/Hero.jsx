@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './hero.module.scss';
 import Button from '../../../components/button/Button';
-//import HeroImg from '../../../assets/img/restauran_food.jpg';
+import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -16,7 +16,9 @@ const Hero = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Button>Reserve a Table</Button>
+          <NavLink to='/reservations'>
+            <Button>Reserve a Table</Button>
+          </NavLink>
         </div>
         <div className={styles.hero_img_wrapper}>
           <div className={styles.hero_img}></div>
