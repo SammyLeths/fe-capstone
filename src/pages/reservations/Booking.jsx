@@ -3,21 +3,37 @@ import Header from '../../layouts/header/Header';
 import Footer from '../../layouts/footer/Footer';
 import styles from './booking.module.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 const Booking = ({ dispatch }) => {
   const location = useLocation();
   const navigate = new useNavigate();
-  const time = location.state.time;
 
-  // const [fullname, setFullname] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [request, setRequest] = useState('');
+  const formik = useFormik({
+    initialValues: {
+      fullname: '',
+      phone: '',
+      request: '',
+    },
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch({ value: time });
-    navigate('/success');
-  };
+    validationSchema: Yup.object({
+      fullname: Yup.string().required('Please enter your fullname'),
+      phone: Yup.string().required('Please enter your phone number'),
+      request: Yup.string().required('Please enter your additional request'),
+    }),
+
+    onSubmit: (values) => {
+      navigate('/success', {
+        state: {
+          ...location.state,
+          fullname: values.fullname,
+          phone: values.phone,
+          request: values.request,
+        },
+      });
+    },
+  });
 
   return (
     <>
@@ -48,36 +64,54 @@ const Booking = ({ dispatch }) => {
                 <h4>{location.state.occasion}</h4>
               </div>
             </div>
-            <form className={styles.form_wrapper} onSubmit={handleSubmit}>
+            <form
+              className={styles.form_wrapper}
+              onSubmit={formik.handleSubmit}
+            >
               <div className={styles.form_control}>
                 <label htmlFor='fullname'>Full name</label>
                 <input
+                  required
                   type='text'
+                  name='fullname'
                   id='fullname'
                   className={styles.form_input}
-                  //onChange={(e) => setFullname(e.target.value)}
+                  value={formik.values.fullname}
+                  {...formik.getFieldProps('fullname')}
                 />
+                {formik.errors.fullname && formik.touched.fullname && (
+                  <p>{formik.errors.fullname}</p>
+                )}
               </div>
               <div className={styles.form_control}>
                 <label htmlFor='phone'>Phone number</label>
                 <input
+                  required
                   type='number'
                   placeholder='+234 70 1234 5678'
-                  min='1'
-                  max='18'
+                  name='phone'
                   id='phone'
                   className={styles.form_input}
-                  //onChange={(e) => setPhone(e.target.value)}
+                  value={formik.values.phone}
+                  {...formik.getFieldProps('phone')}
                 />
+                {formik.errors.phone && formik.touched.phone && (
+                  <p>{formik.errors.phone}</p>
+                )}
               </div>
               <div className={styles.form_control}>
                 <label htmlFor='request'>Additional request</label>
-                <input
-                  type='text'
+                <textarea
+                  required
+                  name='request'
                   id='request'
                   className={styles.form_input}
-                  //onChange={(e) => setRequest(e.target.value)}
+                  value={formik.values.request}
+                  {...formik.getFieldProps('request')}
                 />
+                {formik.errors.request && formik.touched.request && (
+                  <p>{formik.errors.request}</p>
+                )}
               </div>
               <div className={styles.form_control}>
                 <input

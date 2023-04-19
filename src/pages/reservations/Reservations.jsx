@@ -5,15 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../../layouts/header/Header';
 import Footer from '../../layouts/footer/Footer';
 import styles from './reservations.module.scss';
-//import { fetchAPI } from '../../API/GetData';
 
 const Reservations = ({ initialTimes, dispatch }) => {
-  // const [date, setDate] = useState('');
-  // const [time, setTime] = useState('');
-  // const [guests, setGuests] = useState('');
-  // const [occasion, setOccasion] = useState('');
-  // const [timeSlots, setTimeSlots] = useState([]);
-  // const [timeSlotsDisabled, setTimeSlotsDisabled] = useState(true);
   const navigate = new useNavigate();
 
   const formik = useFormik({
@@ -43,29 +36,6 @@ const Reservations = ({ initialTimes, dispatch }) => {
     },
   });
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   navigate('/booking');
-  //   console.log(date, time, guests, occasion);
-  // };
-
-  // const updateDate = (dateStr) => {
-  //   if (dateStr === '') return;
-  //   let response = fetchAPI(new Date(formatDate(dateStr)));
-  //   setTimeSlotsDisabled(false);
-  //   console.log(response);
-  //   setTimeSlots(response);
-  // };
-
-  // useEffect(() => {
-  //   updateDate(formik.values.date);
-  // }, [formik.values.date]);
-
-  // const formatDate = (dateString) => {
-  //   let dateArray = dateString.split('-');
-  //   return dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
-  // };
-
   return (
     <>
       <Header />
@@ -77,7 +47,6 @@ const Reservations = ({ initialTimes, dispatch }) => {
       </section> */}
       <section className={styles.reserve}>
         <div className={styles.container}>
-          {/* <div className={styles.overlay}></div> */}
           <div className={styles.reserve__cta}>
             <h2>Experience the perfect balance of tradition and luxury.</h2>
             <p>
@@ -104,23 +73,12 @@ const Reservations = ({ initialTimes, dispatch }) => {
                   id='date'
                   className={styles.form_input}
                   value={formik.values.date}
-                  //onChange={(e) => setDate(e.target.value)}
                   {...formik.getFieldProps('date')}
                 />
                 {formik.errors.date && formik.touched.date && (
                   <p>{formik.errors.date}</p>
                 )}
               </div>
-              {/* <div className={styles.form_control}>
-                <label htmlFor='res-time'>Choose time</label>
-                <input
-                  name='res-time'
-                  type='time'
-                  id='res-time'
-                  className={styles.form_input}
-                  onChange={(e) => setTime(e.target.value)}
-                />
-              </div> */}
               <div className={styles.form_control}>
                 <label htmlFor='time'>Choose time</label>
                 <select
@@ -128,19 +86,13 @@ const Reservations = ({ initialTimes, dispatch }) => {
                   name='time'
                   id='time'
                   className={styles.form_input}
-                  //onChange={(e) => setTime(e.target.value)}
                   value={formik.values.time}
                   {...formik.getFieldProps('time')}
                 >
+                  <option value=''>--:--</option>
                   {initialTimes.times.map((time) => (
                     <option key={time}>{time}</option>
                   ))}
-                  {/* <option value='17:00'>17:00</option>
-                  <option value='18:00'>18:00</option>
-                  <option value='19:00'>19:00</option>
-                  <option value='20:00'>20:00</option>
-                  <option value='21:00'>21:00</option>
-                  <option value='22:00'>22:00</option> */}
                 </select>
                 {formik.errors.time && formik.touched.time && (
                   <p>{formik.errors.time}</p>
@@ -176,6 +128,7 @@ const Reservations = ({ initialTimes, dispatch }) => {
                   value={formik.values.occasion}
                   {...formik.getFieldProps('occasion')}
                 >
+                  <option value=''>-- Select Occasion --</option>
                   <option value='birthday'>Birthday</option>
                   <option value='engagement'>Engagment</option>
                   <option value='anniversary'>Anniversary</option>

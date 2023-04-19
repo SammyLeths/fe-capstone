@@ -7,11 +7,12 @@ header {
   top: 0;
   background-color: white;
   z-index: 3;
+  border-bottom: 1px solid header.$primary-feldgrau;
 
   /* For large devices ≥ 992px */
-  @media screen and (min-width: header.$lg) {
-    border-bottom: 1px solid header.$primary-feldgrau;
-  }
+  // @media screen and (min-width: header.$lg) {
+  //   border-bottom: 1px solid header.$primary-feldgrau;
+  // }
 
   .container {
     display: flex;

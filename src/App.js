@@ -6,6 +6,7 @@ import Menu from './pages/menu/Menu';
 import Reservations from './pages/reservations/Reservations';
 import Booking from './pages/reservations/Booking';
 import OrderOnline from './pages/order_online/OrderOnline';
+import Success from './pages/reservations/Success';
 import Login from './pages/login/Login';
 import { fetchAPI } from './API/GetData';
 
@@ -38,6 +39,7 @@ function App() {
           element={<Reservations initialTimes={availableTimes} />}
         />
         <Route path='/booking' element={<Booking dispatch={dispatch} />} />
+        <Route path='/success' element={<Success />} />
         <Route path='/order-online' element={<OrderOnline />} />
         <Route path='/login' element={<Login />} />
       </Routes>

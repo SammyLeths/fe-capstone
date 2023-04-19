@@ -79,6 +79,10 @@
       &:last-child {
         margin-top: 1rem;
       }
+
+      p {
+        color: red;
+      }
     }
 
     .form_input {
@@ -89,6 +93,11 @@
 
     input[type='submit'] {
       @include booking.btn;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
     }
   }
 }

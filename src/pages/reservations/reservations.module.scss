@@ -24,6 +24,11 @@
 .reserve {
   padding: 5rem 0 20rem 0;
 
+  /* For large devices ≤ 768px */
+  @media screen and (max-width: reserve.$md) {
+    padding: 5rem 0 36rem 0;
+  }
+
   .container {
     position: relative;
     display: grid;
@@ -41,6 +46,19 @@
     border-radius: 1rem;
     // filter: contrast(150%);
 
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: reserve.$md) {
+      grid-template-columns: 1fr;
+      row-gap: 2.5rem;
+      position: relative;
+      padding-bottom: 8rem;
+    }
+
+    /* For large devices ≤ 576px */
+    @media screen and (max-width: reserve.$sm) {
+      padding: 2rem 2rem 8rem 2rem;
+    }
+
     .overlay {
       @include reserve.overlay;
       background-color: rgba(black, 0.3);
@@ -50,7 +68,16 @@
 
   &__cta {
     padding-right: 5rem;
-    //z-index: 1;
+
+    /* For large devices ≤ 992px */
+    @media screen and (max-width: reserve.$lg) {
+      padding-right: 1rem;
+    }
+
+    /* For large devices ≤ 576px */
+    @media screen and (max-width: reserve.$sm) {
+      padding-right: 0;
+    }
 
     h2 {
       line-height: 0.9;
@@ -62,6 +89,11 @@
       color: white;
       padding-right: 6rem;
 
+      /* For large devices ≤ 576px */
+      @media screen and (max-width: reserve.$sm) {
+        padding-right: 0;
+      }
+
       &:not(:last-child) {
         margin-bottom: 1rem;
       }
@@ -69,16 +101,31 @@
   }
 
   &__form {
+    position: absolute;
+    right: 3.8rem;
+    top: 3.8rem;
+    height: auto;
     width: 40%;
     background-color: white;
     padding: 2.5rem;
     border: 3px solid reserve.$primary-gold;
     border-radius: 1rem;
     z-index: 1;
-    position: absolute;
-    right: 3.8rem;
-    top: 3.8rem;
-    height: auto;
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: reserve.$md) {
+      width: 70%;
+      top: 150%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* For large devices ≤ 576px */
+    @media screen and (max-width: reserve.$sm) {
+      width: 82%;
+      top: 135%;
+      padding: 1.5rem;
+    }
 
     p {
       margin-bottom: 1.5rem;

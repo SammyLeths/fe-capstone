@@ -1,0 +1,41 @@
+@use '../../app.module.scss' as success;
+
+.success {
+  padding: 5rem 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 4rem;
+    background-color: success.$primary-feldgrau;
+    border: 1px solid success.$primary-gold;
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: success.$md) {
+      width: 70%;
+    }
+
+    /* For large devices ≤ 768px */
+    @media screen and (max-width: success.$sm) {
+      width: 90%;
+      padding: 2rem;
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+  }
+}
