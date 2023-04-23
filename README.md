@@ -1,3 +1,30 @@
+# Little Lemon Table Reservation
+
+<p>Little Lemon is a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+<p>The restaurant website has a dinning reservation / booking feature that allows customers to book a table ahead of visiting</p>
+<p>Developed using:</p>
+<ul>
+<li>JavaScript</li>
+<li>React</li>
+<li>Formik</li>
+<li>Yuo</li>
+<li>Framer Motion</li>
+<li>Sass</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
