@@ -7,7 +7,7 @@
 <li>JavaScript</li>
 <li>React</li>
 <li>Formik</li>
-<li>Yuo</li>
+<li>Yup</li>
 <li>Framer Motion</li>
 <li>Sass</li>
 </ul>
