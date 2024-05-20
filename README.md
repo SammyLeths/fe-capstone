@@ -15,7 +15,7 @@
 ## Links
 
 <ul>
-  <li>Demo: <a href="https://fell-capstone.netlify.app/" target="_blank">https://littlelemon-fe.netlify.app/</a></li>
+  <li>Demo: <a href="https://littlelemon-fe.netlify.app/" target="_blank">https://littlelemon-fe.netlify.app/</a></li>
 </ul>
 
 ## Wireframe
