@@ -18,6 +18,15 @@
   <li>Demo: <a href="https://littlelemon-fe.netlify.app/" target="_blank">https://littlelemon-fe.netlify.app/</a></li>
 </ul>
 
+## Author's Links
+
+<ul>
+  <li>Portfolio - <a href="https://sammyleths.com" target="_blank">@SammyLeths</a></li>
+  <li>Linkedin - <a href="https://www.linkedin.com/in/eyiowuawi/" target="_blank">@SammyLeths</a></li>
+  <li>Twitter - <a href="https://twitter.com/SammyLeths" target="_blank">@SammyLeths</a></li>
+  <li>Buy me a Coffee - <a href="https://buymeacoffee.com/sammyleths" target="_blank"> @SammyLeths </a></li>
+</ul>
+
 ## Wireframe
 
 ![LL-Capstone-Wireframe](https://user-images.githubusercontent.com/64320618/233850445-1d12742f-7fa5-4311-82d8-80b60169f540.png)
